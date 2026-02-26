@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8" />
+    <title>Обращения в поддержку</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    </head>
+    <body>
+    <header class="header">
+        <div class="header-inner">
+        <div class="header-left">
+            <img src="/static/icon.png" alt="Иконка" class="header-icon" />
+        </div>
+        <button
+            class="header-button"
+            onclick="window.location.href='tickets.html'"
+        >
+            Назад
+        </button>
+        </div>
+    </header>
+
+    <div id="root"></div>
+
+    <!-- React и ReactDOM из CDN -->
+    <script
+        src="https://unpkg.com/react@18/umd/react.development.js"
+        crossorigin
+    ></script>
+    <script
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        crossorigin
+    ></script>
+
+    <!-- Babel для поддержки JSX прямо в браузере -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="/static/table.js"></script>
+    </body>
+</html>

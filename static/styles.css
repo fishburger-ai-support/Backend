@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #ffffff;
+  /* тень с прозрачностью ~5% */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+
+.header-button {
+  padding: 8px 16px;
+  border-radius: 13px;
+  border: none;
+  background: #40a9ff;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+
+.header-button:hover {
+  background: #A7C7E5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.header-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 80px auto 40px; /* отступ сверху под фиксированную шапку */
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.title-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filters-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.filters-left label {
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+.filters-left input,
+.filters-left select {
+  margin-top: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  min-width: 50px;
+}
+
+.filters-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.filters-center input {
+  width: 100%;
+  max-width: 320px;
+  padding: 4px 10px;
+  border-radius: 13px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+.actions-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.actions-panel button {
+  min-width: 160px;
+  padding: 4px 10px;
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.1s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.actions-panel button:hover {
+  background: #f3f3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.actions-panel button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+thead {
+  background: #f0f0f0;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+.tone {
+  font-weight: 600;
+}
+
+.tone-positive {
+  color: #1a7f37;
+}
+
+.tone-neutral {
+  color: #555;
+}
+
+.tone-negative {
+  color: #b3261e;
+}
+
+.actions button {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 13px;
+  border: 1px solid #1976d2;
+  background: #1976d2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.pagination button {
+  padding: 4px 10px;
+  border-radius: 13px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
