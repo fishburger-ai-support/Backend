@@ -1,0 +1,14 @@
+psycopg2-binary==2.9.9
+requests~=2.32.4
+python-dotenv==1.0.0
+sentence-transformers==2.2.2
+numpy~=2.4.2
+gunicorn==23.0.0
+urllib3~=2.6.3
+pydantic~=2.12.5
+SQLAlchemy~=2.0.47
+uvicorn~=0.41.0
+httpx~=0.28.1
+aiosmtplib~=5.1.0
+fastapi~=0.133.1
+pydantic-settings~=2.13.1
